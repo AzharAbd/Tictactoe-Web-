@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<style>
+body {
+  background-color: white;
+}
+.column {
+  float:left;
+}
+.main_content {
+  width:50%
+}
+.left{
+  width : 35%;
+  flow:left;
+}
+.right{
+  width: 15%;
+  flow:left;
+}
+.table1 {
+  background-color: white;
+  border-collapse: collapse;
+}
+.table tr {
+  background-color: white;
+  margin: 3px;
+}
+.table1 #tr2{
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+  border-width: 5px;
+}
+.table1 .td2{
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  border-width: 5px;
+}
+ul {
+  background-color: dimgray;
+  list-style-type: none;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+li a:hover{
+  background-color: #4CAF50;
+}
+
+.table2 th, .table2 td{
+  width: 120px;
+  font-family: fantasy;
+  text-align: left;
+}
+</style>
+<script src="logic2.js">
+
+</script>
+</head>
+
+<body>
+
+<div class="navbar">
+  <ul>
+    <li><a href="home.html"> Home </a></li>
+    <li><a href="ttc.html" style="background-color:#4CAF50;"> Tictactoe </a></li>
+    <li><a href="sudoku.html"> Sudoku </a></li>
+    <li><a href="24Solver.html">24 Solver </a> </li>
+    <li><a href="about.html"> About </a></li>
+  </ul>
+</div>
+<div class="column left"><p></p></div>
+<div class="column main_content">
+<table class="table1">
+  <tr id="tr1">
+    <td class="td1"><image id="1" onclick="change('1')" src="blank.png" style="height:130px; width:130px"></image></td>
+    <td class="td2"><image id="2" onclick="change('2')" src="blank.png" style="height:130px; width:130px"></image></td>
+    <td class="td3"class="td1"class="td1"class="td1"class="td1"><image id="3" onclick="change('3')" src="blank.png" style="height:130px; width:130px"></image></td>
+  </tr>
+  <tr id="tr2">
+    <td class="td1"><image id="4" onclick="change('4')" src="blank.png" style="height:130px; width:130px"></image></td>
+    <td class="td2"class="td1"class="td1"class="td1"><image id="5" onclick="change('5')" src="blank.png" style="height:130px; width:130px"></image></td>
+    <td class="td3"class="td1"class="td1"><image id="6" onclick="change('6')" src="blank.png" style="height:130px; width:130px"></image></td>
+  </tr>
+  <tr id="tr3">
+    <td class="td1"><image id="7" onclick="change('7')" src="blank.png" style="height:130px; width:130px"></image></td>
+    <td class="td2"class="td1"><image id="8" onclick="change('8')" src="blank.png" style="height:130px; width:130px"></image></td>
+    <td class="td3"><image id="9" onclick="change('9')" src="blank.png" style="height:130px; width:130px"></image></td>
+  </tr>
+
+
+</table>
+
+<br>
+
+<table class="table2">
+  <tr>
+    <th id="pl1" style="color:red;">PLAYER 1 (X)</th>
+    <th>TIE</th>
+    <th id="pl2">PLAYER 2 (O)<th>
+  </tr>
+  <tr>
+    <td id="player1">0</td>
+    <td id="seri1">0</td>
+    <td id="player2">0</td>
+    <td> <a href="ttc.html" target="_self"> VS CPU! </a></td>
+  </tr>
+</table>
+<button type="button" onclick="resetval()"> reset</button>
+</div>
+<div class="column right"><p></p></div>
+</body>
